@@ -12,7 +12,7 @@ set -o vi
 PYTHONPATH="/Users/andrewlin/PythonModules:$PYTHONPATH"
 export PYTHONPATH
 
-export PATH="$PATH:/Users/andrewlin/Library/Python/2.7/bin"
+export PATH="$PATH:/Users/andrewlin/Library/Python/2.7/bin:/usr/local/mysql/bin"
 
 #if [ -f `brew --prefix`/etc/bash_completion ]; then
 #    . `brew --prefix`/etc/bash_completion
