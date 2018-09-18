@@ -1,3 +1,40 @@
+set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
+hi statusline ctermbg=white ctermfg=black
+set laststatus=2
+
+syntax on
+set background=dark
+colorscheme elflord
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
+
+" HTML settings
+au BufNewFile,BufRead *.html
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+"    \ set textwidth=79 |
+    \ set expandtab |
+    \ set autoindent |
+    \ set fileformat=unix
+
+" " before reading realpython article
+" set tabstop=4
+" set shiftwidth=4
+" set noexpandtab
+" " Expand tabs for python and javascript files
+" autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" autocmd Filetype javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+" set smartindent
+" " end before reading realpython article
+
+
 " for Vundle
 set nocompatible              " required
 filetype off                  " required
@@ -46,39 +83,3 @@ highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 " UTF8 support
 set encoding=utf-8
-
-set statusline=[%n]\ %<%F\ \ \ [%M%R%H%W%Y][%{&ff}]\ \ %=\ line:%l/%L\ col:%c\ \ \ %p%%\ \ \ @%{strftime(\"%H:%M:%S\")}
-hi statusline ctermbg=white ctermfg=black
-set laststatus=2
-
-syntax on
-set background=dark
-colorscheme elflord
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-set splitbelow
-set splitright
-
-" HTML settings
-au BufNewFile,BufRead *.html
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
-    \ set shiftwidth=2 |
-"    \ set textwidth=79 |
-    \ set expandtab |
-    \ set autoindent |
-    \ set fileformat=unix
-
-" " before reading realpython article
-" set tabstop=4
-" set shiftwidth=4
-" set noexpandtab
-" " Expand tabs for python and javascript files
-" autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-" autocmd Filetype javascript setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-" set smartindent
-" " end before reading realpython article
